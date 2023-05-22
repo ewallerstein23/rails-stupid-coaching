@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="title">Stupid Coaching</h1>
+
+ <div class="col-md-8">
+    <p><%= @answer %></p>
+    <p class="you">- You</p>
+  </div>
+  <div class="col-md-8" >
+    <div id="image-container">
+      <img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2017%2F10%2Fprofoto-story-behind-albert-watson-steve-jobs-portrait-video-000.jpg?w=960&cbr=1&q=90&fit=max" class="img-fluid" alt="Responsive image">
+    </div>
+    <div class="alert alert-warning" role="alert">
+      <%# <div class="card"> %>
+      <% if params[:question] == "i am going to work right now!" %>
+        <p></p>
+      <% elsif params[:question]&.include?("?") %>
+        <p>Silly question, get dressed and go to work!</p>
+      <% else %>
+        <p>I don't care, get dressed and go to work!</p>
+      <% end %>
+
+        <p class="you">- Your coach</p>
+      <%# </div> %>
+    <div>
+  <div>
+
+  <%= link_to "Ask a new question", ask_path %>
+</div>
